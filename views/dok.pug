@@ -1,0 +1,9 @@
+extends icerik_layout
+
+block content
+  each elem,i in json
+    h1 !{elem.baslik}
+    p !{elem.siir}
+    br
+    h4 !{elem.yil}
+    i İsmet Özel
