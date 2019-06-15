@@ -46,7 +46,7 @@ router.get('/dok_json', (req, res) => {
 });
 
 // Başlığı girilen şiiri JSON formatında döndürür.
-router.get('/:baslik', (req, res, next) => {
+router.get('/getir/json/:baslik', (req, res, next) => {
   const promise = Siir.find({ baslik: req.params.baslik });
 
   promise.then((siir) => {
@@ -62,7 +62,7 @@ router.get('/:baslik', (req, res, next) => {
 });
 
 // Başlığı girilen şiiri HTML sayfasında çağır
-router.get('/dok/:baslik', (req, res) => {
+router.get('/getir/html/:baslik', (req, res) => {
   const promise = Siir.find({ baslik: req.params.baslik });
 
   promise.then((data) => {
@@ -89,12 +89,12 @@ router.get('/rastgele/json', (req, res) => {
 // Rastgee şiiri HTML sayfasında çağır
 router.get('/rastgele/html', (req, res) => {
   const rast = Math.floor((Math.random() * 10) + 1);
-  console.log(rast);
   const promise = Siir.findOne({ no: rast });
 
   promise.then((data) => {
     var json = data;
     console.log(json.baslik);
+    console.log(json);
     res.render('dok_baslik', { json });
     // res.json(data);
   }).catch((err) => {
