@@ -84,11 +84,11 @@ router.get('/rastgele/json', (req, res) => {
 // Rastgee şiiri HTML sayfasında çağır
 router.get('/rastgele/html', (req, res) => {
   const rast = Math.floor((Math.random() * 10) + 1);
-  const promise = Siir.findOne({ no: rast });
+  const promise = Siir.find({ no: rast }).select('-_id');
 
   promise.then((data) => {
     var json = data;
-    res.render('dok_baslik', { json });
+    res.render('dok_baslik', { title: json.baslik, json });
     // res.json(data);
   }).catch((err) => {
     res.json(err);
