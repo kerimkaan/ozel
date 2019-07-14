@@ -1,15 +1,13 @@
+/* eslint-disable linebreak-style */
 var express = require('express');
 
 var router = express.Router();
 const Siir = require('../models/siir');
-
 const { version } = require('../package.json'); // Package.json'daki version'u döndürür.
-
 /* GET home page. */
 router.get('/', (req, res) => {
   res.render('index', { title: 'İsmet Özel API', version });
 });
-
 // Şiir ekleme
 router.post('/', (req, res) => {
   const siir = new Siir(req.body);
@@ -20,7 +18,6 @@ router.post('/', (req, res) => {
     res.json(err);
   }));
 });
-
 // Tüm şiirleri HTML sayfasında çağır
 router.get('/dok', (req, res) => {
   const promise = Siir.find({ });
@@ -33,7 +30,6 @@ router.get('/dok', (req, res) => {
     res.json(err);
   });
 });
-
 // Tüm şiirleri JSON formatında çağır
 router.get('/dok_json', (req, res) => {
   const promise = Siir.find({ });
@@ -46,7 +42,7 @@ router.get('/dok_json', (req, res) => {
 });
 
 // Başlığı girilen şiiri JSON formatında döndürür.
-router.get('/:baslik', (req, res, next) => {
+router.get('/getir/json/:baslik', (req, res, next) => {
   const promise = Siir.find({ baslik: req.params.baslik });
 
   promise.then((siir) => {
@@ -62,7 +58,7 @@ router.get('/:baslik', (req, res, next) => {
 });
 
 // Başlığı girilen şiiri HTML sayfasında çağır
-router.get('/dok/:baslik', (req, res) => {
+router.get('/getir/html/:baslik', (req, res) => {
   const promise = Siir.find({ baslik: req.params.baslik });
 
   promise.then((data) => {
@@ -76,7 +72,6 @@ router.get('/dok/:baslik', (req, res) => {
 // Rastgele şiir getirir. [JSON] (1-10 arasında rakamlar döndürür.)
 router.get('/rastgele/json', (req, res) => {
   const rast = Math.floor((Math.random() * 10) + 1);
-  console.log(rast); // Konsolda random değeri görüntüleme
   const promise = Siir.findOne({ no: rast });
 
   promise.then((data) => {
@@ -89,12 +84,10 @@ router.get('/rastgele/json', (req, res) => {
 // Rastgee şiiri HTML sayfasında çağır
 router.get('/rastgele/html', (req, res) => {
   const rast = Math.floor((Math.random() * 10) + 1);
-  console.log(rast);
   const promise = Siir.findOne({ no: rast });
 
   promise.then((data) => {
     var json = data;
-    console.log(json.baslik);
     res.render('dok_baslik', { json });
     // res.json(data);
   }).catch((err) => {
