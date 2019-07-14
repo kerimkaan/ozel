@@ -4,7 +4,7 @@
 
 # İsmet Özel API
 
-> İsmet Özel şiirlerinden mısralar çekebileceğiniz RESTful API
+> İsmet Özel şiirleri ve mısraları çekebileceğiniz RESTful API
 
 ## Kullanım
 
@@ -20,10 +20,23 @@
 | /rastgele/dize | `GET` | :construction: | Random bir dize getirir |
 | /*Başlık* | `PUT` | *{'baslik':'Münacaat', yil: '1974', siir: 'Bu yaşa erdirdin beni, gençtim almadın canımı ölmedim genç olarak' }* | Belirtilen başlıktaki şiiri değiştirir. |
 
+Örnek:
+~~~~~
+https://ismetozel.herokuapp.com/getir/html/Amentü
+~~~~~
+
 ## Bilgiler
 
-NodeJS ve Express Framework'ü ile Pug view engine kullanarak oluşturulmuştur, veritabanı olarak MongoDB ile MongoDB'nin bulut ürünü olan MongoDB Atlas, canlıya çıkarılması için Herkou kullanılmıştır.
+NodeJS ve Express Framework'ü ile Pug view engine kullanarak oluşturulmuştur, veritabanı olarak MongoDB Atlas, canlıya çıkarılması için Heroku kullanılmıştır.
 
 ## Yayın
 
 [Canlı ürün](https://ismetozel.herokuapp.com) heroku üzerinde bulunmaktadır.
+
+## Katkıda Bulunma
+
+Katkıda bulunmak için 'pull request' yapabilir veya POST methodu ile şiir ekleyebilirsiniz. (Not: Var olan şiirlerde bazı bilgi eksiklikleri olabilir.) 
+
+## Sorun, Görüş & Öneri
+
+Sorun, görüş ve öneri için [Issue](https://github.com/kerimkaan/ozel/issues) kısmını kullabilir ya da [Twitter](https://twitter.com/kerimkaandonmez)'dan bana yazabilirsiniz.
