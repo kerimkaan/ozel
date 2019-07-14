@@ -22,7 +22,7 @@
 
 Örnek:
 ~~~~~
-https://ismetozel.herokuapp.com/getir/html/Amentü
+https://ismetozel.herokuapp.com/getir/html/Amentu
 ~~~~~
 
 ## Bilgiler
