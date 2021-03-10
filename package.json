@@ -2,7 +2,7 @@
     "name": "ozelapi",
     "description": "İsmet Özel şiirleri ve mısraları çekebileceğiniz RESTful API",
     "version": "0.1.0",
-    "author": "Kerim Kaan Dönmez <kaan@kerimkaan.com> (http://kerimkaan.com)",
+    "author": "Kerim Kaan Dönmez <kaan@kerimkaan.com> (https://kerimkaan.com)",
     "bugs": "https://github.com/kerimkaan/ozel/issues",
     "license": "MIT",
     "keywords": [
