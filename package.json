@@ -22,7 +22,7 @@
         "debug": "~2.6.9",
         "express": "~4.16.1",
         "http-errors": "~1.6.3",
-        "mongoose": "^5.11.19",
+        "mongoose": "^5.12.6",
         "mongoose-sequence": "^5.3.1",
         "mongoose-simple-random": "^0.4.1",
         "morgan": "~1.9.1",
