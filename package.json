@@ -21,7 +21,7 @@
         "cookie-parser": "^1.4.5",
         "debug": "~2.6.9",
         "express": "~4.16.1",
-        "http-errors": "~1.6.3",
+        "http-errors": "~1.8.0",
         "mongoose": "^5.12.7",
         "mongoose-sequence": "^5.3.1",
         "mongoose-simple-random": "^0.4.1",
