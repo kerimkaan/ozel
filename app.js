@@ -21,7 +21,6 @@ app.use(compression());
 // MongoDB Atlas kullanıcı adı ve şifreleri Heroku Config Vars olarak çekilmektdir.
 const mongoDB = `mongodb://${process.env.atlas_username}:${process.env.atlas_password}@ozel-shard-00-00-pijd0.mongodb.net:27017,ozel-shard-00-01-pijd0.mongodb.net:27017,ozel-shard-00-02-pijd0.mongodb.net:27017/ozel?ssl=true&replicaSet=ozel-shard-0&authSource=admin&retryWrites=true`;
 mongoose.connect(mongoDB);
-mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongodb bağlantı hatası'));
 
