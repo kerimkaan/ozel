@@ -1,6 +1,9 @@
+/* eslint-disable vars-on-top */
+/* eslint-disable linebreak-style */
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+require('dotenv').config();
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
@@ -17,7 +20,8 @@ app.use(compression());
 // var mongoDB = 'mongodb://' + process.env.atlas_username + ':' + process.env.atlas_password + '@ozel-shard-00-00-pijd0.mongodb.net:27017,ozel-shard-00-01-pijd0.mongodb.net:27017,ozel-shard-00-02-pijd0.mongodb.net:27017/ozel?ssl=true&replicaSet=ozel-shard-0&authSource=admin&retryWrites=true';
 
 // MongoDB Atlas kullanıcı adı ve şifreleri Heroku Config Vars olarak çekilmektdir.
-var mongoDB = 'mongodb://kaan:Kaankaan33@ozel-shard-00-00-pijd0.mongodb.net:27017,ozel-shard-00-01-pijd0.mongodb.net:27017,ozel-shard-00-02-pijd0.mongodb.net:27017/ozel?ssl=true&replicaSet=ozel-shard-0&authSource=admin&retryWrites=true';
+const mongoDB = `mongodb://kaan:${process.env.atlas_password}@ozel-shard-00-00-pijd0.mongodb.net:27017,ozel-shard-00-01-pijd0.mongodb.net:27017,ozel-shard-00-02-pijd0.mongodb.net:27017/ozel?ssl=true&replicaSet=ozel-shard-0&authSource=admin&retryWrites=true`;
+// var mongoDB = 'mongodb://kaan:@ozel-shard-00-00-pijd0.mongodb.net:27017,ozel-shard-00-01-pijd0.mongodb.net:27017,ozel-shard-00-02-pijd0.mongodb.net:27017/ozel?ssl=true&replicaSet=ozel-shard-0&authSource=admin&retryWrites=true';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
