@@ -3,10 +3,8 @@
 </p>
 
 # İsmet Özel API
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkerimkaan%2Fozel.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkerimkaan%2Fozel?ref=badge_shield)
 
-
-> İsmet Özel şiirleri ve mısraları çekebileceğiniz RESTful API
+> İsmet Özel şiirleri ve mısraları çekebileceğiniz [RESTful API](https://ismetozel.herokuapp.com)
 
 ## Kullanım
 
@@ -42,6 +40,3 @@ Katkıda bulunmak için 'pull request' yapabilir veya POST methodu ile şiir ekl
 ## Sorun, Görüş & Öneri
 
 Sorun, görüş ve öneri için [Issue](https://github.com/kerimkaan/ozel/issues) kısmını kullabilir ya da [Twitter](https://twitter.com/kerimkaandonmez)'dan bana yazabilirsiniz.
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkerimkaan%2Fozel.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkerimkaan%2Fozel?ref=badge_large)
